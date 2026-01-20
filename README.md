@@ -1,4 +1,4 @@
-# クロードコードのすべて
+# Claude Code のすべて
 
 **Anthropic ハカソンの優勝者による Claude Code 構成の完全なコレクション。**
 
@@ -10,17 +10,14 @@
 
 **これらの構成に入る前に、X:** に関する完全なガイドをお読みください。
 
-
 <img width="592" height="445" alt="image" src="https://github.com/user-attachments/assets/1a471488-59cc-425b-8345-5245c7efbcef" />
 
-
-**[すべてのクロード コードの短縮ガイド](https://x.com/affaanmustafa/status/2012378465664745795)**
-
-
+**[すべてのClaude Code の短縮ガイド](https://x.com/affaanmustafa/status/2012378465664745795)**
 
 ガイドでは次のように説明されています。
+
 - 各構成タイプの機能とそれをいつ使用するか
-- クロードコードのセットアップを構成する方法
+- Claude Code のセットアップを構成する方法
 - コンテキスト ウィンドウの管理 (パフォーマンスにとって重要)
 - 並列ワークフローと高度なテクニック
 - これらの構成の背後にある哲学
@@ -166,10 +163,12 @@ model: opus
 ```json
 {
   "matcher": "tool == \"Edit\" && tool_input.file_path matches \"\\\\.(ts|tsx|js|jsx)$\"",
-  "hooks": [{
-    "type": "command",
-    "command": "#!/bin/bash\ngrep -n 'console\\.log' \"$file_path\" && echo '[フック] console.logを削除してください' >&2"
-  }]
+  "hooks": [
+    {
+      "type": "command",
+      "command": "#!/bin/bash\ngrep -n 'console\\.log' \"$file_path\" && echo '[フック] console.logを削除してください' >&2"
+    }
+  ]
 }
 ```
 
@@ -191,6 +190,7 @@ model: opus
 **貢献は歓迎されており、奨励されています。**
 
 このリポジトリはコミュニティ リソースであることを目的としています。お持ちの場合:
+
 - 便利なエージェントまたはスキル
 - 賢いフック
 - より優れた MCP 構成
@@ -223,6 +223,7 @@ model: opus
 **重要:** すべての MCP を一度に有効にしないでください。有効なツールが多すぎると、200k のコンテキスト ウィンドウが 70k に縮小する可能性があります。
 
 経験則:
+
 - 20 ～ 30 個の MCP が構成されている
 - プロジェクトごとに 10 未満を有効にします
 - アクティブなツールが 80 個未満
@@ -232,6 +233,7 @@ model: opus
 ### カスタマイズ
 
 これらの構成は私のワークフローで機能します。あなたがすべき：
+
 1. 共感できるものから始める
 2. スタックに合わせて変更する
 3. 使わないものは取り除く
@@ -241,7 +243,7 @@ model: opus
 
 ## リンク
 
-- **完全ガイド:** [クロード コードのすべての短縮ガイド](https://x.com/affaanmustafa/status/2012378465664745795)
+- **完全ガイド:** [Claude Code のすべての短縮ガイド](https://x.com/affaanmustafa/status/2012378465664745795)
 - **フォロー:** [@Affanmustafa](https://x.com/affanmustafa)
 - **zenith.chat:** [zenith.chat](https://zenith.chat)
 
