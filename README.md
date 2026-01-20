@@ -1,35 +1,35 @@
-# Everything Claude Code
+# クロードコードのすべて
 
-**The complete collection of Claude Code configs from an Anthropic hackathon winner.**
+**Anthropic ハカソンの優勝者による Claude Code 構成の完全なコレクション。**
 
-This repo contains production-ready agents, skills, hooks, commands, rules, and MCP configurations that I use daily with Claude Code. These configs evolved over 10+ months of intensive use building real products.
+このリポジトリには、Claude Code で毎日使用する実稼働対応のエージェント、スキル、フック、コマンド、ルール、MCP 構成が含まれています。これらの構成は、実際の製品を構築する 10 か月以上の集中的な使用を経て進化しました。
 
 ---
 
-## Read the Full Guide First
+## 最初に完全なガイドをお読みください
 
-**Before diving into these configs, read the complete guide on X:**
+**これらの構成に入る前に、X:** に関する完全なガイドをお読みください。
 
 
 <img width="592" height="445" alt="image" src="https://github.com/user-attachments/assets/1a471488-59cc-425b-8345-5245c7efbcef" />
 
 
-**[The Shorthand Guide to Everything Claude Code](https://x.com/affaanmustafa/status/2012378465664745795)**
+**[すべてのクロード コードの短縮ガイド](https://x.com/affaanmustafa/status/2012378465664745795)**
 
 
 
-The guide explains:
-- What each config type does and when to use it
-- How to structure your Claude Code setup
-- Context window management (critical for performance)
-- Parallel workflows and advanced techniques
-- The philosophy behind these configs
+ガイドでは次のように説明されています。
+- 各構成タイプの機能とそれをいつ使用するか
+- クロードコードのセットアップを構成する方法
+- コンテキスト ウィンドウの管理 (パフォーマンスにとって重要)
+- 並列ワークフローと高度なテクニック
+- これらの構成の背後にある哲学
 
-**This repo is configs only! Tips, tricks and more examples are in my X articles and videos (links will be appended to this readme as it evolves).**
+**このリポジトリは構成のみです。ヒント、コツ、その他の例は、X の記事とビデオにあります (この Readme が進化するにつれてリンクが追加されます)。**
 
 ---
 
-## What's Inside
+## 中身は何ですか
 
 ```
 everything-claude-code/
@@ -91,9 +91,9 @@ everything-claude-code/
 
 ---
 
-## Quick Start
+## クイックスタート
 
-### 1. Copy what you need
+### 1. 必要なものをコピーします
 
 ```bash
 # Clone the repo
@@ -112,27 +112,27 @@ cp everything-claude-code/commands/*.md ~/.claude/commands/
 cp -r everything-claude-code/skills/* ~/.claude/skills/
 ```
 
-### 2. Add hooks to settings.json
+### 2. settings.json にフックを追加します。
 
-Copy the hooks from `hooks/hooks.json` to your `~/.claude/settings.json`.
+フックを `hooks/hooks.json` から `~/.claude/settings.json` にコピーします。
 
-### 3. Configure MCPs
+### 3. MCP を構成する
 
-Copy desired MCP servers from `mcp-configs/mcp-servers.json` to your `~/.claude.json`.
+必要な MCP サーバーを `mcp-configs/mcp-servers.json` から `~/.claude.json` にコピーします。
 
-**Important:** Replace `YOUR_*_HERE` placeholders with your actual API keys.
+**重要:** `YOUR_*_HERE` プレースホルダーを実際の API キーに置き換えます。
 
-### 4. Read the guide
+### 4. ガイドを読む
 
-Seriously, [read the guide](https://x.com/affaanmustafa/status/2012378465664745795). These configs make 10x more sense with context.
+真剣に、[ガイドを読んでください](https://x.com/affaanmustafa/status/2012378465664745795)。これらの構成は、コンテキストと合わせて 10 倍意味を持ちます。
 
 ---
 
-## Key Concepts
+## 主要な概念
 
-### Agents
+### エージェント
 
-Subagents handle delegated tasks with limited scope. Example:
+サブエージェントは、限定された範囲で委任されたタスクを処理します。例：
 
 ```markdown
 ---
@@ -145,9 +145,9 @@ model: opus
 You are a senior code reviewer...
 ```
 
-### Skills
+### スキル
 
-Skills are workflow definitions invoked by commands or agents:
+スキルは、コマンドまたはエージェントによって呼び出されるワークフロー定義です。
 
 ```markdown
 # TDD Workflow
@@ -159,9 +159,9 @@ Skills are workflow definitions invoked by commands or agents:
 5. Verify 80%+ coverage
 ```
 
-### Hooks
+### フック
 
-Hooks fire on tool events. Example - warn about console.log:
+フックはツール イベントで起動されます。例 - console.log について警告します。
 
 ```json
 {
@@ -173,9 +173,9 @@ Hooks fire on tool events. Example - warn about console.log:
 }
 ```
 
-### Rules
+### ルール
 
-Rules are always-follow guidelines. Keep them modular:
+ルールは常に従うべきガイドラインです。モジュール化しておいてください。
 
 ```
 ~/.claude/rules/
@@ -186,71 +186,71 @@ Rules are always-follow guidelines. Keep them modular:
 
 ---
 
-## Contributing
+## 貢献する
 
-**Contributions are welcome and encouraged.**
+**貢献は歓迎されており、奨励されています。**
 
-This repo is meant to be a community resource. If you have:
-- Useful agents or skills
-- Clever hooks
-- Better MCP configurations
-- Improved rules
+このリポジトリはコミュニティ リソースであることを目的としています。お持ちの場合:
+- 便利なエージェントまたはスキル
+- 賢いフック
+- より優れた MCP 構成
+- ルールの改善
 
-Please contribute! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+ぜひ貢献してください！ガイドラインについては、[CONTRIBUTING.md](CONTRIBUTING.md) を参照してください。
 
-### Ideas for Contributions
+### 貢献のアイデア
 
-- Language-specific skills (Python, Go, Rust patterns)
-- Framework-specific configs (Django, Rails, Laravel)
-- DevOps agents (Kubernetes, Terraform, AWS)
-- Testing strategies (different frameworks)
-- Domain-specific knowledge (ML, data engineering, mobile)
-
----
-
-## Background
-
-I've been using Claude Code since the experimental rollout. Won the Anthropic x Forum Ventures hackathon in Sep 2025 building [zenith.chat](https://zenith.chat) with [@DRodriguezFX](https://x.com/DRodriguezFX) - entirely using Claude Code.
-
-These configs are battle-tested across multiple production applications.
+- 言語固有のスキル (Python、Go、Rust パターン)
+- フレームワーク固有の構成 (Django、Rails、Laravel)
+- DevOps エージェント (Kubernetes、Terraform、AWS)
+- テスト戦略 (さまざまなフレームワーク)
+- ドメイン固有の知識 (ML、データ エンジニアリング、モバイル)
 
 ---
 
-## Important Notes
+＃＃ 背景
 
-### Context Window Management
+私は実験的なロールアウト以来、Claude Code を使用してきました。 2025 年 9 月に Anthropic x Forum Ventures ハッカソンで [zenith.chat](https://zenith.chat) を [@DRodriguezFX](https://x.com/DRodriguezFX) とともに構築し、完全に Claude Code を使用して優勝しました。
 
-**Critical:** Don't enable all MCPs at once. Your 200k context window can shrink to 70k with too many tools enabled.
-
-Rule of thumb:
-- Have 20-30 MCPs configured
-- Keep under 10 enabled per project
-- Under 80 tools active
-
-Use `disabledMcpServers` in project config to disable unused ones.
-
-### Customization
-
-These configs work for my workflow. You should:
-1. Start with what resonates
-2. Modify for your stack
-3. Remove what you don't use
-4. Add your own patterns
+これらの構成は、複数の実稼働アプリケーションにわたって徹底的にテストされています。
 
 ---
 
-## Links
+## 重要な注意事項
 
-- **Full Guide:** [The Shorthand Guide to Everything Claude Code](https://x.com/affaanmustafa/status/2012378465664745795)
-- **Follow:** [@affaanmustafa](https://x.com/affaanmustafa)
+### コンテキストウィンドウの管理
+
+**重要:** すべての MCP を一度に有効にしないでください。有効なツールが多すぎると、200k のコンテキスト ウィンドウが 70k に縮小する可能性があります。
+
+経験則:
+- 20 ～ 30 個の MCP が構成されている
+- プロジェクトごとに 10 未満を有効にします
+- アクティブなツールが 80 個未満
+
+未使用のものを無効にするには、プロジェクト構成で `disabledMcpServers` を使用します。
+
+### カスタマイズ
+
+これらの構成は私のワークフローで機能します。あなたがすべき：
+1. 共感できるものから始める
+2. スタックに合わせて変更する
+3. 使わないものは取り除く
+4. 独自のパターンを追加する
+
+---
+
+## リンク
+
+- **完全ガイド:** [クロード コードのすべての短縮ガイド](https://x.com/affaanmustafa/status/2012378465664745795)
+- **フォロー:** [@Affanmustafa](https://x.com/affanmustafa)
 - **zenith.chat:** [zenith.chat](https://zenith.chat)
 
 ---
 
-## License
+## ライセンス
 
-MIT - Use freely, modify as needed, contribute back if you can.
+MIT - 自由に使用し、必要に応じて変更し、可能であれば貢献してください。
 
 ---
 
-**Star this repo if it helps. Read the guide. Build something great.**
+**役立つ場合は、このリポジトリにスターを付けてください。ガイドを読んでください。素晴らしいものを構築しましょう。**
