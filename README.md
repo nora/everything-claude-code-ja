@@ -33,60 +33,60 @@
 
 ```
 everything-claude-code/
-|-- agents/           # Specialized subagents for delegation
-|   |-- planner.md           # Feature implementation planning
-|   |-- architect.md         # System design decisions
-|   |-- tdd-guide.md         # Test-driven development
-|   |-- code-reviewer.md     # Quality and security review
-|   |-- security-reviewer.md # Vulnerability analysis
+|-- agents/           # 委任用の専門サブエージェント
+|   |-- planner.md           # 機能実装計画
+|   |-- architect.md         # システム設計の意思決定
+|   |-- tdd-guide.md         # テスト駆動開発
+|   |-- code-reviewer.md     # 品質とセキュリティレビュー
+|   |-- security-reviewer.md # 脆弱性分析
 |   |-- build-error-resolver.md
-|   |-- e2e-runner.md        # Playwright E2E testing
-|   |-- refactor-cleaner.md  # Dead code cleanup
-|   |-- doc-updater.md       # Documentation sync
+|   |-- e2e-runner.md        # Playwright E2Eテスト
+|   |-- refactor-cleaner.md  # デッドコードのクリーンアップ
+|   |-- doc-updater.md       # ドキュメント同期
 |
-|-- skills/           # Workflow definitions and domain knowledge
-|   |-- coding-standards.md         # Language best practices
-|   |-- backend-patterns.md         # API, database, caching patterns
-|   |-- frontend-patterns.md        # React, Next.js patterns
-|   |-- project-guidelines-example.md # Example project-specific skill
-|   |-- tdd-workflow/               # TDD methodology
-|   |-- security-review/            # Security checklist
-|   |-- clickhouse-io.md            # ClickHouse analytics
+|-- skills/           # ワークフロー定義とドメイン知識
+|   |-- coding-standards.md         # 言語のベストプラクティス
+|   |-- backend-patterns.md         # API、データベース、キャッシュパターン
+|   |-- frontend-patterns.md        # React、Next.jsパターン
+|   |-- project-guidelines-example.md # プロジェクト固有スキルの例
+|   |-- tdd-workflow/               # TDD手法
+|   |-- security-review/            # セキュリティチェックリスト
+|   |-- clickhouse-io.md            # ClickHouseアナリティクス
 |
-|-- commands/         # Slash commands for quick execution
-|   |-- tdd.md              # /tdd - Test-driven development
-|   |-- plan.md             # /plan - Implementation planning
-|   |-- e2e.md              # /e2e - E2E test generation
-|   |-- code-review.md      # /code-review - Quality review
-|   |-- build-fix.md        # /build-fix - Fix build errors
-|   |-- refactor-clean.md   # /refactor-clean - Dead code removal
-|   |-- test-coverage.md    # /test-coverage - Coverage analysis
-|   |-- update-codemaps.md  # /update-codemaps - Refresh docs
-|   |-- update-docs.md      # /update-docs - Sync documentation
+|-- commands/         # クイック実行用スラッシュコマンド
+|   |-- tdd.md              # /tdd - テスト駆動開発
+|   |-- plan.md             # /plan - 実装計画
+|   |-- e2e.md              # /e2e - E2Eテスト生成
+|   |-- code-review.md      # /code-review - 品質レビュー
+|   |-- build-fix.md        # /build-fix - ビルドエラー修正
+|   |-- refactor-clean.md   # /refactor-clean - デッドコード削除
+|   |-- test-coverage.md    # /test-coverage - カバレッジ分析
+|   |-- update-codemaps.md  # /update-codemaps - ドキュメント更新
+|   |-- update-docs.md      # /update-docs - ドキュメント同期
 |
-|-- rules/            # Always-follow guidelines
-|   |-- security.md         # Mandatory security checks
-|   |-- coding-style.md     # Immutability, file organization
-|   |-- testing.md          # TDD, 80% coverage requirement
-|   |-- git-workflow.md     # Commit format, PR process
-|   |-- agents.md           # When to delegate to subagents
-|   |-- performance.md      # Model selection, context management
-|   |-- patterns.md         # API response formats, hooks
-|   |-- hooks.md            # Hook documentation
+|-- rules/            # 常に従うべきガイドライン
+|   |-- security.md         # 必須セキュリティチェック
+|   |-- coding-style.md     # 不変性、ファイル構成
+|   |-- testing.md          # TDD、80%カバレッジ要件
+|   |-- git-workflow.md     # コミット形式、PRプロセス
+|   |-- agents.md           # サブエージェントへの委任タイミング
+|   |-- performance.md      # モデル選択、コンテキスト管理
+|   |-- patterns.md         # APIレスポンス形式、フック
+|   |-- hooks.md            # フックのドキュメント
 |
-|-- hooks/            # Trigger-based automations
-|   |-- hooks.json          # PreToolUse, PostToolUse, Stop hooks
+|-- hooks/            # トリガーベースの自動化
+|   |-- hooks.json          # PreToolUse、PostToolUse、Stopフック
 |
-|-- mcp-configs/      # MCP server configurations
-|   |-- mcp-servers.json    # GitHub, Supabase, Vercel, Railway, etc.
+|-- mcp-configs/      # MCPサーバー設定
+|   |-- mcp-servers.json    # GitHub、Supabase、Vercel、Railwayなど
 |
-|-- plugins/          # Plugin ecosystem documentation
-|   |-- README.md           # Plugins, marketplaces, skills guide
+|-- plugins/          # プラグインエコシステムのドキュメント
+|   |-- README.md           # プラグイン、マーケットプレイス、スキルガイド
 |
-|-- examples/         # Example configurations
-    |-- CLAUDE.md           # Example project-level config
-    |-- user-CLAUDE.md      # Example user-level config (~/.claude/CLAUDE.md)
-    |-- statusline.json     # Custom status line config
+|-- examples/         # 設定例
+    |-- CLAUDE.md           # プロジェクトレベル設定の例
+    |-- user-CLAUDE.md      # ユーザーレベル設定の例 (~/.claude/CLAUDE.md)
+    |-- statusline.json     # カスタムステータスライン設定
 ```
 
 ---
@@ -96,19 +96,19 @@ everything-claude-code/
 ### 1. 必要なものをコピーします
 
 ```bash
-# Clone the repo
+# リポジトリをクローン
 git clone https://github.com/affaan-m/everything-claude-code.git
 
-# Copy agents to your Claude config
+# エージェントをClaudeの設定フォルダにコピー
 cp everything-claude-code/agents/*.md ~/.claude/agents/
 
-# Copy rules
+# ルールをコピー
 cp everything-claude-code/rules/*.md ~/.claude/rules/
 
-# Copy commands
+# コマンドをコピー
 cp everything-claude-code/commands/*.md ~/.claude/commands/
 
-# Copy skills
+# スキルをコピー
 cp -r everything-claude-code/skills/* ~/.claude/skills/
 ```
 
@@ -137,12 +137,12 @@ cp -r everything-claude-code/skills/* ~/.claude/skills/
 ```markdown
 ---
 name: code-reviewer
-description: Reviews code for quality, security, and maintainability
+description: コードの品質、セキュリティ、保守性をレビュー
 tools: Read, Grep, Glob, Bash
 model: opus
 ---
 
-You are a senior code reviewer...
+あなたはシニアコードレビュアーです...
 ```
 
 ### スキル
@@ -150,13 +150,13 @@ You are a senior code reviewer...
 スキルは、コマンドまたはエージェントによって呼び出されるワークフロー定義です。
 
 ```markdown
-# TDD Workflow
+# TDDワークフロー
 
-1. Define interfaces first
-2. Write failing tests (RED)
-3. Implement minimal code (GREEN)
-4. Refactor (IMPROVE)
-5. Verify 80%+ coverage
+1. まずインターフェースを定義
+2. 失敗するテストを書く（RED）
+3. 最小限のコードを実装（GREEN）
+4. リファクタリング（IMPROVE）
+5. 80%以上のカバレッジを確認
 ```
 
 ### フック
@@ -168,7 +168,7 @@ You are a senior code reviewer...
   "matcher": "tool == \"Edit\" && tool_input.file_path matches \"\\\\.(ts|tsx|js|jsx)$\"",
   "hooks": [{
     "type": "command",
-    "command": "#!/bin/bash\ngrep -n 'console\\.log' \"$file_path\" && echo '[Hook] Remove console.log' >&2"
+    "command": "#!/bin/bash\ngrep -n 'console\\.log' \"$file_path\" && echo '[フック] console.logを削除してください' >&2"
   }]
 }
 ```
@@ -179,9 +179,9 @@ You are a senior code reviewer...
 
 ```
 ~/.claude/rules/
-  security.md      # No hardcoded secrets
-  coding-style.md  # Immutability, file limits
-  testing.md       # TDD, coverage requirements
+  security.md      # ハードコードされたシークレット禁止
+  coding-style.md  # 不変性、ファイル制限
+  testing.md       # TDD、カバレッジ要件
 ```
 
 ---
