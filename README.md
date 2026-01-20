@@ -1,3 +1,10 @@
+# everything-claude-code-ja
+
+当リポジトリは [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) のドキュメント類を和訳したものです。
+contribution は受け付けていません。
+
+---
+
 # Claude Code のすべて
 
 **Anthropic ハカソンの優勝者による Claude Code 構成の完全なコレクション。**
@@ -12,7 +19,7 @@
 
 <img width="592" height="445" alt="image" src="https://github.com/user-attachments/assets/1a471488-59cc-425b-8345-5245c7efbcef" />
 
-**[すべてのClaude Code の短縮ガイド](https://x.com/affaanmustafa/status/2012378465664745795)**
+**[すべての Claude Code の短縮ガイド](https://x.com/affaanmustafa/status/2012378465664745795)**
 
 ガイドでは次のように説明されています。
 
@@ -147,7 +154,7 @@ model: opus
 スキルは、コマンドまたはエージェントによって呼び出されるワークフロー定義です。
 
 ```markdown
-# TDDワークフロー
+# TDD ワークフロー
 
 1. まずインターフェースを定義
 2. 失敗するテストを書く（RED）
@@ -185,30 +192,13 @@ model: opus
 
 ---
 
-## 貢献する
+## Contributing
 
-**貢献は歓迎されており、奨励されています。**
-
-このリポジトリはコミュニティ リソースであることを目的としています。お持ちの場合:
-
-- 便利なエージェントまたはスキル
-- 賢いフック
-- より優れた MCP 構成
-- ルールの改善
-
-ぜひ貢献してください！ガイドラインについては、[CONTRIBUTING.md](CONTRIBUTING.md) を参照してください。
-
-### 貢献のアイデア
-
-- 言語固有のスキル (Python、Go、Rust パターン)
-- フレームワーク固有の構成 (Django、Rails、Laravel)
-- DevOps エージェント (Kubernetes、Terraform、AWS)
-- テスト戦略 (さまざまなフレームワーク)
-- ドメイン固有の知識 (ML、データ エンジニアリング、モバイル)
+受け付けていません。
 
 ---
 
-＃＃ 背景
+## 背景
 
 私は実験的なロールアウト以来、Claude Code を使用してきました。 2025 年 9 月に Anthropic x Forum Ventures ハッカソンで [zenith.chat](https://zenith.chat) を [@DRodriguezFX](https://x.com/DRodriguezFX) とともに構築し、完全に Claude Code を使用して優勝しました。
 
@@ -252,7 +242,3 @@ model: opus
 ## ライセンス
 
 MIT - 自由に使用し、必要に応じて変更し、可能であれば貢献してください。
-
----
-
-**役立つ場合は、このリポジトリにスターを付けてください。ガイドを読んでください。素晴らしいものを構築しましょう。**
